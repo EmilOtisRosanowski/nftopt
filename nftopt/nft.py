@@ -102,4 +102,4 @@ def nakanishi_fujii_todo(fun, x0, args=(), maxfev=1024, reset_interval=32, eps=1
 
         niter += 1
 
-    return OptimizeResult(fun=fun(np.copy(x0)), x=x0, nit=niter, nfev=funcalls, success=(niter > 1))
+    return OptimizeResult(fun=fun(np.copy(x0),*args), x=x0, nit=niter, nfev=funcalls, success=(niter > 1))
